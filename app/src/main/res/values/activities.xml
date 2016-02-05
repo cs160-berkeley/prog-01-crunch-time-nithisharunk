@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activities_array">
+        <item>Push-ups (reps)</item>
+        <item>Sit-ups (reps)</item>
+        <item>Jumping Jacks (min)</item>
+        <item>Jogging (min)</item>
+        <item>Calories</item>
+    </string-array>
+</resources>

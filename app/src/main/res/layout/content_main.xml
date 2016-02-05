@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.nithish.calorieconverter.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Calorie Converter"
+        android:id="@+id/textView"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="40sp" />
+
+    <EditText
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/amount_text_view"
+        android:hint="0.0"
+        android:editable="false"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:textAlignment="textEnd"
+        android:textColor="#1b36cc" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_type_spinner"
+        android:layout_toStartOf="@+id/amount_text_view"
+        android:paddingLeft="5dp"
+        android:spinnerMode="dialog"
+        android:textAlignment="textStart"
+        android:layout_alignBottom="@+id/amount_text_view"
+        android:layout_alignTop="@+id/amount_text_view"
+        android:theme="@android:style/TextAppearance.Holo.Large"
+        android:layout_alignEnd="@+id/convert_button" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:id="@+id/convert_button"
+        android:layout_below="@+id/activity_type_spinner"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Push-ups:"
+        android:id="@+id/push_up_eq"
+        android:textSize="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sit-ups:"
+        android:id="@+id/sit_up_eq"
+        android:paddingTop="10dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/push_up_eq"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Calories"
+        android:id="@+id/calories_text"
+        android:textSize="28dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/convert_button"
+        android:layout_alignEnd="@+id/amount_text_view"
+        android:layout_alignStart="@+id/textView"
+        android:textColor="#1b36cc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Jumping jacks:"
+        android:id="@+id/jump_jack_eq"
+        android:paddingTop="10dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/sit_up_eq"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Jogging:"
+        android:id="@+id/jog_eq"
+        android:paddingTop="10dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/jump_jack_eq"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/push_up_reps"
+        android:layout_above="@+id/sit_up_eq"
+        android:text="0"
+        android:textSize="16dp"
+        android:textAlignment="textEnd"
+        android:textColor="#1b36cc"
+        android:layout_alignEnd="@+id/calories_text"
+        android:layout_toEndOf="@+id/convert_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/sit_up_reps"
+        android:text="0"
+        android:layout_above="@+id/jump_jack_eq"
+        android:layout_alignStart="@+id/push_up_reps"
+        android:textSize="16dp"
+        android:textColor="#1b36cc"
+        android:textAlignment="textEnd"
+        android:layout_alignEnd="@+id/push_up_reps" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/jump_jack_time"
+        android:text="0"
+        android:layout_alignBottom="@+id/jump_jack_eq"
+        android:layout_alignStart="@+id/sit_up_reps"
+        android:textSize="16dp"
+        android:textColor="#1b36cc"
+        android:textAlignment="textEnd"
+        android:layout_alignEnd="@+id/sit_up_reps" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/jog_time"
+        android:text="0"
+        android:layout_alignBottom="@+id/jog_eq"
+        android:layout_alignStart="@+id/jump_jack_time"
+        android:textSize="16dp"
+        android:textColor="#1b36cc"
+        android:textAlignment="textEnd"
+        android:layout_alignEnd="@+id/jump_jack_time" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Equivalent amount of:"
+        android:id="@+id/textView2"
+        android:textSize="20dp"
+        android:layout_marginTop="31dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/calories_text"
+        android:textColor="#171515" />
+
+
+</RelativeLayout>
